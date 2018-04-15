@@ -9,4 +9,4 @@ restRouter.use('/user', userRouter);
 restRouter.use('/song', songRouter);
 restRouter.use('/playlist', playlistRouter);
 
-restRouter.get('/', (req, res) => res.json({ location: 'restRouter.js' }));
+// restRouter.get('/', (req, res) => res.json({ location: 'restRouter.js' }));
