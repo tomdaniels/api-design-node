@@ -3,4 +3,13 @@ import songController from './song.controller'
 
 export const songRouter = express.Router()
 
-songRouter.get('/', (req, res) => res.json({ location: 'songRouter.js' }));
+songRouter.param('id', songController.findByParam)
+
+songRouter.route('/')
+  .get(songController.getAll)
+  .post(songController.createOne)
+
+songRouter.route('/:id')
+  .get(songController.getOne)
+  .put(songController.updateOne)
+  .delete(songController.createOne)
