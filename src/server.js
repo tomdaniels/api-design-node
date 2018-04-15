@@ -10,7 +10,7 @@ const apiRouter = express.Router();
 
 app.use('/api', restRouter);
 
-app.all('*', (req, res) => {
+app.all('/', (req, res) => {
   res.json({ location: "server.js" });
 });
 
